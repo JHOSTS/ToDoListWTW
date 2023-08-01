@@ -1,12 +1,98 @@
+body, .ng-template{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 button:hover{
     transform: scale(1.05);
 }
 
+h4{
+    padding-left: 45%;
+    font-size: xx-large;
+}
 .container{
-    padding: 5%;
-    align-items: center;
-    background-color: blueviolet;
+    padding: 3%;
+    align-content: center;
+    background-color: #ad69fa57;
     margin-top: 5%;
     border-radius: 15px;
+    box-shadow: 100px 100px 100px #00000042;
+    border: solid 1px #42048a85;
+}
+
+.out-table{
     box-shadow: 15px;
+    background-color: rgba(148, 38, 252, 0);
+    padding: 5%;
+    border-radius: 10px;
+    border: solid 1px #c390fc85;
+    box-shadow: 10px 10px 10px #422f5354
+}
+
+.btn-tarefa{
+    margin-bottom: 2%;
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-tarefa:hover{
+    background-color: rgb(230, 195, 253);
+}
+
+.btn-concluir{
+    border: none;
+    background-color: rgba(139, 175, 104, 0.808);
+    border-radius: 5px;
+}
+
+.btn-concluir:hover{
+    background-color: rgba(136, 219, 52, 0.808);
+}
+
+.btn-excluir{
+    border: none;
+    background-color: rgba(175, 104, 104, 0.808);
+    border-radius: 5px;
+}
+
+.btn-excluir:hover{
+    background-color: rgba(219, 52, 52, 0.808);
+}
+
+.ng-template{
+    background-color:#ff767685;
+}
+
+.row{
+    margin-top: 2%;
+}
+
+.btn-add{
+    border: none;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+.btn-add:hover{
+    background-color: rgba(246, 145, 255, 0.808);
+}
+
+.btn-voltar{
+    border: none;
+    background-color: transparent;
+    margin-left: 5px;
+}
+
+.btn-voltar:hover{
+    border-radius: 5px;
+    background-color: #c08afd77;
+}
+
+.form-group{
+    margin-top: 2%;
+}
+
+label{
+    margin-bottom: 0.5%;
 }
