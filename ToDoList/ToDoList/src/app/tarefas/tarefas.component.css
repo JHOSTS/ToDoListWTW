@@ -1,0 +1,12 @@
+button:hover{
+    transform: scale(1.05);
+}
+
+.container{
+    padding: 5%;
+    align-items: center;
+    background-color: blueviolet;
+    margin-top: 5%;
+    border-radius: 15px;
+    box-shadow: 15px;
+}
