@@ -1,39 +1,42 @@
 
-<body>
   <p *ngIf="!tarefas"><em>Loading...</em></p>
+
   <div class="container" *ngIf="visibilidadeTarefas">
-    <h4> Tarefas </h4>
+    <div class="rounded p-5">
+    <button type="button" class="btn btn-sm btn-secondary" (click)="ExibirFormulario()">
+        Nova tarefa
+    </button>
+    </div>
+
+    <hr />
+
     
-    <div class="out-table">
-        <button type="button" class="btn-tarefa" (click)="ExibirFormulario()">
-            Nova tarefa
-        </button>
-      <table class="table" *ngIf="visibilidadeTarefas">
-        <tr class="thread">
+      <table class="table table-striped table-hover table-sm" *ngIf="visibilidadeTarefas">
+        <tr class="thread-light">
         <th>Nome da Tarefa</th>
         <th>Descrição</th>
         <th>Data de Criação</th>
+        <th>Concluída</th>
         </tr>
+
         <tr *ngFor="let tarefa of tarefas">
-        <td class="tdread" hidden="true">{{ tarefa.iD_TAREFA }}</td>    
+        <td hidden="true">{{ tarefa.iD_TAREFA }}</td>    
         <td>{{ tarefa.nomE_TAREFA }}</td>
         <td>{{ tarefa.descricaO_TAREFA }}</td>
         <td>{{ tarefa.datA_CRIACAO }}</td>
         <td>
-            <button class="btn-concluir" (click)="TarefaConcluida(tarefa)">  Concluir Tarefa </button>
+            <button class="btn btn-sm btn-outline-info" (click)="TarefaConcluida(tarefa)">  Concluir Tarefa </button>
         <td>
-            <button type="button" class="btn-excluir" (click)="ExibirConfirmacaoExclusao(tarefa.iD_TAREFA, tarefa.nomE_TAREFA, conteudoModal)">
+            <button type="button" class="btn btn-sm btn-outline-danger" (click)="ExibirConfirmacaoExclusao(tarefa.iD_TAREFA, tarefa.nomE_TAREFA, conteudoModal)">
             Excluir
             </button>
         </tr>
-        </table>
-    </div>
+    </table>
 </div>
 
-    <div class="container" *ngIf="visibilidadeForm">
+    <div class="container p5" *ngIf="visibilidadeForm">
     <form [formGroup]="formulario" (ngSubmit)="EnviarFormulario()">
-        <h5>{{tituloFormulario}}</h5>
-        <hr/>
+        <h6>{{tituloFormulario}}</h6>
         <div class="form-group">
         <label>Nome da Tarefa</label>
         <input type="text" class="form-control form-control-sm" formControlName="nomE_TAREFA" />
@@ -44,22 +47,27 @@
         <input type="text" class="form-control form-control-sm" formControlName="descricaO_TAREFA" />
         </div>
 
+        <div class="container p-1">
         <div class="row">
             <div>
-            <button type="submit" class="btn-add">
+            <button type="submit" class="btn btn-sm btn-outline-secondary">
                 Adicionar
             </button>
-            <button type="button" class="btn-voltar" (click)="Voltar()">
+            <button type="button" class="btn btn-sm" (click)="Voltar()">
                 Voltar
             </button>
             </div>
         </div>
+        </div>
     </form>
 </div>
 
-    <ng-template class="ng-template" #conteudoModal>
+    <ng-template #conteudoModal>
     <div class="modal-header">
-        <h3 class="modal-title pull-left">Confirmação de Exclusão</h3>
+        <h4 class="modal-title pull-left">Confirmação de Exclusão</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <div class="modal-body">
         Deseja realmente excluir a tarefa "{{nomE_TAREFA}}"?
@@ -70,4 +78,4 @@
         <button type="button" class="btn btn-outline-danger" (click)="ExcluirTarefa(iD_TAREFA)">Sim</button>
     </div>
     </ng-template>
-</body>
+

@@ -105,7 +105,7 @@ export class TarefasComponent {
         this.visibilidadeForm = false;
         this.visibilidadeTarefas = true;
       });
-      alert('Tarefa concluída!');
+      alert('Esta tarefa já foi concluída!');
     }
 
   ExibirConfirmacaoExclusao(iD_TAREFA: number, nomE_TAREFA: string, conteudoModal: TemplateRef<any>): void{
