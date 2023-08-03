@@ -40,14 +40,24 @@ h4{
     background-color: rgb(230, 195, 253);
 }
 
-.btn-concluir{
+.btn-pendente{
     border: none;
     background-color: rgba(139, 175, 104, 0.808);
     border-radius: 5px;
 }
 
-.btn-concluir:hover{
+.btn-pendente:hover{
     background-color: rgba(136, 219, 52, 0.808);
+}
+
+.btn-concluida{
+    border: none;
+    background-color: rgba(129, 133, 125, 0.808);
+    border-radius: 5px;
+}
+
+.btn-concluida:hover{
+    background-color: rgba(208, 211, 206, 0.808);
 }
 
 .btn-excluir{
