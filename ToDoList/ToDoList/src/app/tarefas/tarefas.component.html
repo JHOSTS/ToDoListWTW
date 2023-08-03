@@ -13,6 +13,7 @@
         <th>Nome da Tarefa</th>
         <th>Descrição</th>
         <th>Data de Criação</th>
+        <th>Situação</th>
         </tr>
         <tr *ngFor="let tarefa of tarefas">
         <td class="tdread" hidden="true">{{ tarefa.iD_TAREFA }}</td>    
@@ -20,7 +21,8 @@
         <td>{{ tarefa.descricaO_TAREFA }}</td>
         <td>{{ tarefa.datA_CRIACAO }}</td>
         <td>
-            <button class="btn-concluir" (click)="TarefaConcluida(tarefa)">  Concluir Tarefa </button>
+            <button class="btn-concluida" (click)="TarefaConcluida(tarefa)" *ngIf="tarefa.flaG_CONCLUIDA == true" >  Concluída </button>
+            <button class="btn-pendente" (click)="TarefaConcluida(tarefa)" *ngIf="tarefa.flaG_CONCLUIDA != true">  Concluir Tarefa </button>
         <td>
             <button type="button" class="btn-excluir" (click)="ExibirConfirmacaoExclusao(tarefa.iD_TAREFA, tarefa.nomE_TAREFA, conteudoModal)">
             Excluir
