@@ -26,6 +26,7 @@ export class TarefasComponent {
     datA_CRIACAO: '',
     flaG_CONCLUIDA: false
   };
+  @Input()typeBtn: 'pendente' | 'concluida' = "concluida";
   
 
   constructor(private tarefasService: TarefasService, private modalService: BsModalService) { }
@@ -41,9 +42,6 @@ export class TarefasComponent {
 
     this.tarefasService.RetornaTodasAsTarefas().subscribe(resultado => {
       this.tarefas = resultado;
-
-      console.log(resultado);
-      
     });
   };
 

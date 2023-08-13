@@ -1,5 +1,6 @@
+
 <app-header></app-header>
-<body>
+  
   <p *ngIf="!tarefas"><em>Loading...</em></p>
   <div class="container" *ngIf="visibilidadeTarefas">
     <h4> Tarefas </h4>
@@ -72,4 +73,3 @@
         <button type="button" class="btn btn-outline-danger" (click)="ExcluirTarefa(iD_TAREFA)">Sim</button>
     </div>
     </ng-template>
-</body>
