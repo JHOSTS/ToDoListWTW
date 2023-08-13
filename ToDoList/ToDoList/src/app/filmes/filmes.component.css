@@ -1,0 +1,84 @@
+input {
+    border: none;
+    outline: none;
+    background-color: rgb(250, 210, 250);
+    border-radius: 5px;
+    width: 45%;
+    height: 50px;
+    font-size: xx-large;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+
+  .txtFilme {
+    margin-top: 5%;
+    margin-left: 25%;
+  }
+
+  .btnClass{
+    border: none;
+    color: rgb(128, 128, 128);
+    background-color: transparent;
+    font-weight: 600;
+  }
+
+  .btnClass:hover{
+    transform: scale(1.3);
+  }
+
+  .cboCategoria{
+    border: solid 1px rgb(250, 210, 250);
+    height: 40px;
+    margin-left: 1%;
+    margin-top: 0;
+    margin-bottom: 1%;
+    background-color:  rgba(250, 210, 250, 0.473);
+    border-radius: 3px;
+  }
+
+  #filmeId{
+    display: none;
+  }
+  
+  .movie-list {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    width: 25%;
+    flex-wrap: wrap;
+  }
+  
+  .row {
+    border-radius: 13px;
+    margin-top: 5%;
+    margin-left: 2%;
+  }
+
+  .tituloFilme {
+    text-align: center;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 250px;
+  }
+
+  .anoFilme{
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 250px;
+  }
+
+  img{
+    border: 1px solid #030303;
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+  }
+
+  .imgFilme:hover {
+    transform: scale(1.2);
+    box-shadow: 10px 15px 10px #030303;
+    cursor: pointer;
+    border-radius: 5px;
+  }

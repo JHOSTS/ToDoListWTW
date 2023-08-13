@@ -8,12 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TarefasComponent } from './tarefas/tarefas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { FilmesComponent } from './filmes/filmes.component';
+import { HeaderComponent } from './header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TarefasComponent
+    TarefasComponent,
+    FilmesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     ReactiveFormsModule,
     HttpClientModule,
     ModalModule.forRoot(),
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
+    MatIconModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

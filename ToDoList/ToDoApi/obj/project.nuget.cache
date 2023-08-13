@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lxazywTUzhM9cw3ytgcg/N1l0/3lM9SLtMCeGPtO+RTT+E83srPO7tv+C9K+loC05MtqzogyaoZ09+4snYKomw==",
+  "dgSpecHash": "SOwJEqL1N+0kmd8JX2e3fD/sfH9+9lsEmfhzL0dHlKPDo7KuCnDqj55X1mOXxCdGMgf29L26hGqmsZG2OqT6lg==",
   "success": true,
-  "projectFilePath": "E:\\Estudo\\ToDo List WTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
+  "projectFilePath": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jdds_\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Jdds_\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

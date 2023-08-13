@@ -1,5 +1,5 @@
 import { Tarefa } from './../Tarefa';
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 import { TarefasService } from '../tarefas.service';
 import { CheckboxControlValueAccessor, FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
@@ -39,12 +39,11 @@ export class TarefasComponent {
       flaG_CONCLUIDA: new FormControl()
     });
 
-    this.tarefasService.RetornaTarefaPorId(this.iD_TAREFA).subscribe((tarefasEdit) =>{
-      this.tarefasEdit = tarefasEdit;
-    })
-
     this.tarefasService.RetornaTodasAsTarefas().subscribe(resultado => {
       this.tarefas = resultado;
+
+      console.log(resultado);
+      
     });
   };
 
@@ -100,12 +99,12 @@ export class TarefasComponent {
     }
 
     TarefaConcluida(tarefasEdit: Tarefa){
-      tarefasEdit.flaG_CONCLUIDA = true;
+      tarefasEdit.flaG_CONCLUIDA = tarefasEdit.flaG_CONCLUIDA ? false : true;
       this.tarefasService.AtualizarTarefas(tarefasEdit).subscribe((resultado) => {
         this.visibilidadeForm = false;
         this.visibilidadeTarefas = true;
       });
-      alert('Esta tarefa já foi concluída!');
+      tarefasEdit.flaG_CONCLUIDA ? alert('Tarefa concluida!') : alert('Tarefa voltou ao andamento...');
     }
 
   ExibirConfirmacaoExclusao(iD_TAREFA: number, nomE_TAREFA: string, conteudoModal: TemplateRef<any>): void{

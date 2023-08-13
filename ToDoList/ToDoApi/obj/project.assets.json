@@ -3636,11 +3636,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Estudo\\ToDo List WTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
+      "projectUniqueName": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\todoapi\\ToDoApi.csproj",
       "projectName": "ToDoApi",
-      "projectPath": "E:\\Estudo\\ToDo List WTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
+      "projectPath": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\todoapi\\ToDoApi.csproj",
       "packagesPath": "C:\\Users\\Jdds_\\.nuget\\packages\\",
-      "outputPath": "E:\\Estudo\\ToDo List WTW\\ToDoList\\ToDoApi\\obj\\",
+      "outputPath": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\todoapi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
