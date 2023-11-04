@@ -25,7 +25,6 @@ export class FilmesComponent {
     this.filmesservice.RetornaFilmes(this.nomeBusca, this.categoria).subscribe(resultado => {
         this.filmes = new Array(resultado);
           this.filmes = this.filmes[0].results;
-
           console.log(this.filmes);
           return this.filmes;
     });

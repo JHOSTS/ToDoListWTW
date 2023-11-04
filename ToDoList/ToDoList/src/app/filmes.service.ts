@@ -28,7 +28,6 @@ export class FilmesService {
     this.nomeBusca = this.nomeBusca.replace(' ', '+');
 
     this.urlApi = `https://api.themoviedb.org/3/search/${categoria}?query=${nomeBusca}&api_key=${this.filmesApi}&language=pt-BR`;
-    //this.urlApi = `https://www.omdbapi.com/?s=${nomeBusca}&apikey=${this.filmesApi}`;
     return this.http.get<any[]>(this.urlApi);
   }
   

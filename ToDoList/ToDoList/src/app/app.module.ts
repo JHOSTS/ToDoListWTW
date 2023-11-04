@@ -12,6 +12,7 @@ import { FilmesComponent } from './filmes/filmes.component';
 import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatIconModule } from '@angular/material/icon';
+import { PrevisaotempoComponent } from './previsaotempo/previsaotempo.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     TarefasComponent,
     FilmesComponent,
-    HeaderComponent
+    HeaderComponent,
+    PrevisaotempoComponent
   ],
   imports: [
     BrowserModule,
