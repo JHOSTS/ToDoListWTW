@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj": {}
+    "e:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj": {}
   },
   "projects": {
-    "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj": {
+    "e:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
+        "projectUniqueName": "e:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
         "projectName": "ToDoApi",
-        "projectPath": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
+        "projectPath": "e:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
         "packagesPath": "C:\\Users\\Jdds_\\.nuget\\packages\\",
-        "outputPath": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\obj\\",
+        "outputPath": "e:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Jdds_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -83,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

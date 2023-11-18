@@ -1,36 +1,62 @@
 <app-header></app-header>
 
-
-
-
 <div class="txtFilme">
-  <input id="txtFilme" type="text" [(ngModel)]="nomeBusca" placeholder="  Insira o nome do filme ou série">
-  <select class="cboCategoria" id="cboCategoria" [(ngModel)]="categoria">
-    <option value="movie">
-      Filmes
-    </option>
-    <option value="tv">
-      Séries
-    </option>
-  </select>
+    <div>
+      <select class="cboCategoria" id="cboCategoria" [(ngModel)]="categoria">
+        <option value="movie">
+          Filmes
+        </option>
+        <option value="tv">
+          Séries
+        </option>
+      </select>
+    </div>
+    <input id="txtFilme" type="text" [(ngModel)]="nomeBusca" placeholder="  Insira o nome do filme ou série">
     <button class="btnClass" (click)="Buscar()"> 
-        <mat-icon class="btnClass">
-          arrow_circle_right
-        </mat-icon>
+      <mat-icon class="btnClass">
+        send
+      </mat-icon>
     </button>
 </div>
 
 
 <div class="row">
-  <div class="movie-list" *ngFor="let filme of filmes">
-    <td> 
-        <p id="filmeId" class="hidden">{{filme.id}}</p>
+  <div id="list" class="movie-list" *ngFor="let filme of filmes">
+    <td id="tdFilme"> 
         <img class="imgFilme" alt="Poster indisponível" src="https://image.tmdb.org/t/p/w500{{filme.poster_path}}">
         <h3 *ngIf="filme.title" class="tituloFilme">{{filme.title}} 
           <h6 *ngIf="filme.release_date" class="anoFilme">({{filme.release_date | date:'yyyy'}})</h6>
+          <button id="btnFavoritar" class="btnClass" (click)="Favoritar(filme.id)">
+            <!-- <mat-icon class="btnClass">favorite</mat-icon> -->
+            <mat-icon class="btnClass">favorite_border</mat-icon>
+          </button>
         </h3>
         <h3 *ngIf="filme.name" class="tituloFilme">{{filme.name}}
           <h6 *ngIf="filme.first_air_date" class="anoFilme">({{filme.first_air_date | date:'yyyy'}})</h6>
+          <button id="btnFavoritar" class="btnClass" (click)="Favoritar(filme.id)">
+            <!-- <mat-icon class="btnClass">favorite</mat-icon> -->
+            <mat-icon class="btnClass">favorite_border</mat-icon>
+          </button>
         </h3>
     </td>
+</div>
+
+<div id="popUpFavoritos" *ngFor="let filme of filmes" onload="RetornaFavoritos()" style="display: none;">
+  <td id="tdFilme"> 
+    <img class="imgFilme" alt="Poster indisponível" src="https://image.tmdb.org/t/p/w500{{filme.poster_path}}">
+    <h3 *ngIf="filme.title" class="tituloFilme">{{filme.title}} 
+      <h6 *ngIf="filme.release_date" class="anoFilme">({{filme.release_date | date:'yyyy'}})</h6>
+      <button id="btnFavoritar" class="btnClass" (click)="Favoritar(filme.id)">
+        <mat-icon class="btnClass">favorite</mat-icon>
+        <mat-icon class="btnClass">favorite_border</mat-icon>
+      </button>
+    </h3>
+    <h3 *ngIf="filme.name" class="tituloFilme">{{filme.name}}
+      <h6 *ngIf="filme.first_air_date" class="anoFilme">({{filme.first_air_date | date:'yyyy'}})</h6>
+      <button id="btnFavoritar" class="btnClass" (click)="Favoritar(filme.id)">
+        <mat-icon class="btnClass">favorite</mat-icon> 
+        <mat-icon class="btnClass">favorite_border</mat-icon>
+      </button>
+    </h3>
+  </td>
 </div>
