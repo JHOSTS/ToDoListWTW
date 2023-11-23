@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatIconModule } from '@angular/material/icon';
 import { PrevisaotempoComponent } from './previsaotempo/previsaotempo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { PrevisaotempoComponent } from './previsaotempo/previsaotempo.component'
     ModalModule.forRoot(),
     FormsModule,
     FontAwesomeModule,
-    MatIconModule 
+    MatIconModule,
+    MatDialogModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
