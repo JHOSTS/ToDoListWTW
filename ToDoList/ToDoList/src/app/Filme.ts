@@ -1,5 +1,5 @@
 export class Filme {
-    titulo!: string;
-    diretor!: string;
-    ano!: number;
+        FilmeId!:number;
+        UsuarioId!:number;
+        flagFavorito!:boolean;
 }

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map } from 'rxjs';
+import { Filme } from './Filme';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -15,6 +16,8 @@ const httpOptions = {
 })
 
 export class FilmesService {
+  urlFilmes = 'http://localhost:5022/api/filmes';
+
   constructor(private http: HttpClient) { }
   
   //filmesApi = '108e81e5';
@@ -31,4 +34,13 @@ export class FilmesService {
     return this.http.get<any[]>(this.urlApi);
   }
   
+  FavoritaFilme(filme: Filme): Observable<any> {
+    return this.http.post<Filme>(this.urlFilmes, filme, httpOptions);
+  }
+
+  FavoritoPorUsuario(UsuarioId: number): Observable<any> {
+    const apiUrl = `${this.urlFilmes}/${UsuarioId}`;
+    return this.http.get<Filme>(apiUrl);
+    console.log(apiUrl);
+  }
 }

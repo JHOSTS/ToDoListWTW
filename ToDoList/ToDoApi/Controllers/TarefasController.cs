@@ -26,7 +26,7 @@ namespace ToDoApi.Controllers
         [HttpGet("{iD_TAREFA}")]
         public async Task<ActionResult<Tarefa>> RetornaTarefaPorId(int iD_TAREFA)
         {
-            Tarefa tarefa= await _contexto.Tarefas.FindAsync(iD_TAREFA);
+            Tarefa tarefa = await _contexto.Tarefas.FindAsync(iD_TAREFA);
 
             if (tarefa== null)
                 return NotFound();

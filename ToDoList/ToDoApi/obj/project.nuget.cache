@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "68pxWS+h6IITqoG1O0zADQcxBUQV1O4wIe3r4ymssJZZMxtX07ivcC1PY4LouEZ6hJfoUzDBrjX3Uym9JHJv3g==",
   "success": true,
   "projectFilePath": "D:\\Estudo\\ToDoListWTW\\ToDoList\\todoapi\\ToDoApi.csproj",
+=======
+  "dgSpecHash": "lExKp2IXAum9dALGs6y7gQ9TpYxAnBzlRCvVimP3z3dSbWivxQioYdEh1qOrIaQdOJb0L0Y1G/AYNdnHV/6sag==",
+  "success": true,
+  "projectFilePath": "e:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
+>>>>>>> VersaoComFavorito
   "expectedPackageFiles": [
     "C:\\Users\\JhonnatanSantos\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\JhonnatanSantos\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

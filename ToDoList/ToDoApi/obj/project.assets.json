@@ -3629,17 +3629,29 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\JhonnatanSantos\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Jdds_\\.nuget\\packages\\": {},
+>>>>>>> VersaoComFavorito
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\Estudo\\ToDoListWTW\\ToDoList\\todoapi\\ToDoApi.csproj",
       "projectName": "ToDoApi",
       "projectPath": "D:\\Estudo\\ToDoListWTW\\ToDoList\\todoapi\\ToDoApi.csproj",
       "packagesPath": "C:\\Users\\JhonnatanSantos\\.nuget\\packages\\",
       "outputPath": "D:\\Estudo\\ToDoListWTW\\ToDoList\\todoapi\\obj\\",
+=======
+      "projectUniqueName": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
+      "projectName": "ToDoApi",
+      "projectPath": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\ToDoApi.csproj",
+      "packagesPath": "C:\\Users\\Jdds_\\.nuget\\packages\\",
+      "outputPath": "E:\\Estudo\\ToDo List WTW\\ToDoListWTW\\ToDoList\\ToDoApi\\obj\\",
+>>>>>>> VersaoComFavorito
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3710,7 +3722,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+>>>>>>> VersaoComFavorito
       }
     }
   }
