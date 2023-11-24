@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { PrevisaoTempoService } from '../previsaotempo.service';
-import { Dialog } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-previsaotempo',
@@ -16,8 +15,14 @@ lat = '';
 lon ='';
 previsao: any[] = [];
 resultadoTemperatura: boolean = true;
+showLoading: boolean = false;
 
 constructor(private previsaotemposervice: PrevisaoTempoService){}
+
+async loadData() {
+  this.showLoading = true;
+  await new Promise(resolve => setTimeout(resolve, 2000));
+}
 
 ngOnInit(): void{
     navigator.geolocation.getCurrentPosition((position) => {
@@ -29,6 +34,7 @@ ngOnInit(): void{
 };
 
 Cidade(): void{
+  this.localizacao.length > 0 ? this.loadData() : alert('Insira um local para a busca!');
   this.previsaotemposervice.BuscaCidade(this.localizacao).subscribe(resultado => {
     this.coord = new Array(resultado);
       this.lat = this.coord[0][0].lat;
@@ -40,7 +46,8 @@ Cidade(): void{
   Tempo(lat: string, lon: string): void{  
     this.previsaotemposervice.RetornaTempo(lat, lon).subscribe(resultado => {
       this.previsao = new Array(resultado);
-        return this.previsao;
+      this.showLoading = false;
+      return this.previsao;
     });
   }
 }

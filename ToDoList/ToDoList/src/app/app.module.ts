@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatIconModule } from '@angular/material/icon';
 import { PrevisaotempoComponent } from './previsaotempo/previsaotempo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     TarefasComponent,
     FilmesComponent,
     HeaderComponent,
-    PrevisaotempoComponent
+    PrevisaotempoComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

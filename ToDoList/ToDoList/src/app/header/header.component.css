@@ -1,14 +1,8 @@
 header {
-    background-color: #f4befcc9; /* Roxo - pode alterar a cor conforme desejado */
+    background-color: #f4befcc9;
     padding: 10px;
-    color: rgba(255, 255, 255, 0.878); /* Branco para o texto */
+    color: rgba(255, 255, 255, 0.878); 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-  /* Estilização para a navegação */
-nav {
-    display: flex;
-    justify-content:space-around;
 }
 
 ul {
@@ -27,11 +21,36 @@ li:hover {
 }
 
 a {
-    color: #ffffff; /* Branco para os links */
-    text-decoration:none;
+    color: #5f4f4f;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: double;
     transform: scale(1.5);
+}
+
+.menu-container {
+    width: 500px;
+    content-visibility: hidden;
+    transition: width 0.3s ease;
+}
+
+.menu-container.open {
+    width: 400px;
+    content-visibility: auto;
+    display: list-item;
+    justify-content:space-around;
+    margin-left: 10px
+}
+
+.menu-botton {
+    border: none;
+    background-color: transparent;
+    height: 3%;
+    width: 3%;
+}
+
+.menu-botton:hover {
+    transform: scale(1.1);
 }

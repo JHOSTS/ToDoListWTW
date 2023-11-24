@@ -25,7 +25,7 @@ export class PrevisaoTempoService {
     }
 
     RetornaTempo(lat: string, lon: string ): Observable<any[]>{
-        this.urlApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.apiKey}&lang=pt_br&units=metric   `;
+        this.urlApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.apiKey}&lang=pt_br&units=metric`;
 
         return this.http.get<any[]>(this.urlApi);
     }

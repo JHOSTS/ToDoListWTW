@@ -16,20 +16,23 @@ export class FilmesComponent {
   nomeBusca = '';
   categoria = '';
   id!: number;
+  showLoading: boolean = false;
   
   constructor(private filmesService: FilmesService) {}
   
-  ngOnInit(): void{
-  };
-  
+  async loadData() {
+    this.showLoading = true;
+    await new Promise(resolve => setTimeout(resolve, 3000));
+  }
   
   Buscar(): void{
+    this.loadData();
     this.filmesService.RetornaFilmes(this.nomeBusca, this.categoria).subscribe(resultado => {
         this.filmes = new Array(resultado);
           this.filmes = this.filmes[0].results;
-          console.log(this.filmes);
+          this.showLoading = false;
           return this.filmes;
-    });
+        });
   }
 
   Favoritar(id:number): void{
