@@ -33,14 +33,4 @@ export class FilmesService {
     this.urlApi = `https://api.themoviedb.org/3/search/${categoria}?query=${nomeBusca}&api_key=${this.filmesApi}&language=pt-BR`;
     return this.http.get<any[]>(this.urlApi);
   }
-  
-  FavoritaFilme(filme: Filme): Observable<any> {
-    return this.http.post<Filme>(this.urlFilmes, filme, httpOptions);
-  }
-
-  FavoritoPorUsuario(UsuarioId: number): Observable<any> {
-    const apiUrl = `${this.urlFilmes}/${UsuarioId}`;
-    return this.http.get<Filme>(apiUrl);
-    console.log(apiUrl);
-  }
 }

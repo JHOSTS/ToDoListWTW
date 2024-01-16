@@ -14,12 +14,12 @@ export class FilmesComponent {
   filmes: any[] = [];
   favoritos: any[] = [];
   nomeBusca = '';
-  categoria = '';
+  categoria = 'Categoria';
   id!: number;
   showLoading: boolean = false;
   
   constructor(private filmesService: FilmesService) {}
-  
+
   async loadData() {
     this.showLoading = true;
     await new Promise(resolve => setTimeout(resolve, 3000));
@@ -33,26 +33,5 @@ export class FilmesComponent {
           this.showLoading = false;
           return this.filmes;
         });
-  }
-
-  Favoritar(id:number): void{
-    const filme: Filme = {
-      "FilmeId": id,
-      "UsuarioId": 1,
-      "flagFavorito": true,
-    };
-    this.filmesService.FavoritaFilme(filme).subscribe((resultado) => {
-    });
-    console.log(filme);
-  }
-
-  RetornaFavoritos(): void{
-      this.filmesService.FavoritoPorUsuario(1).subscribe(resultado => {
-        this.favoritos = new Array(resultado);
-          this.favoritos = this.favoritos[0].results;
-
-          console.log(this.favoritos);
-          return this.favoritos;
-    });
   }
 }
